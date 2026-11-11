@@ -333,7 +333,7 @@ h1,h2,p,.hint{transition:color 2.5s}
   document.getElementById('snext').onclick=function(){if(pi<pg.length-1)story(pi+1);else show('mem')};
 
   // Memories stack (add photo URLs or data URIs to PHOTOS)
-  var PHOTOS=[],stack=document.getElementById('stack'),busy=false;
+  var PHOTOS=['assets/1.jpg','assets/2.jpg','assets/3.jpg','assets/4.jpg','assets/5.jpg','assets/6.jpg'],stack=document.getElementById('stack'),busy=false;
   (PHOTOS.length?PHOTOS:['🌸','📸','🏔️','✨']).forEach(function(p,i){
     var c=document.createElement('div');c.className='pc';c.style.setProperty('--r',((i%2?1:-1)*(2+Math.random()*5))+'deg');c.style.setProperty('--n',i);
     if(PHOTOS.length)c.style.backgroundImage='url('+p+')';else{c.textContent=p;c.style.background='linear-gradient(135deg,#ffd9a0,#ff9fb8)'}
